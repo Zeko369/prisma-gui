@@ -1,10 +1,11 @@
 import React, { Suspense, useState } from "react"
-import { BlitzPage, useParam } from "@blitzjs/next"
+import { BlitzPage, Routes, useParam } from "@blitzjs/next"
 import { useMutation, useQuery } from "@blitzjs/rpc"
 import { getSchema as parseSchema, Model, createPrismaSchemaBuilder } from "@mrleebo/prisma-ast"
 
 import getSchema from "../../../app/schemas/queries/getSchema"
 import updateSchemaFn from "app/schemas/mutations/updateSchema"
+import Link from "next/link"
 
 type ActionType =
   | { type: "addField"; model: string; field: { name: string; type: string } }
@@ -88,6 +89,8 @@ const Schema: React.FC = () => {
 
   return (
     <div>
+      <Link href={Routes.Home()}>Home</Link>
+
       <h1>{schema.name}</h1>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)" }}>
         <div style={{ gridColumnStart: 1, gridColumnEnd: 6 }}>
