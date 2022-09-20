@@ -3,7 +3,7 @@ import { BlitzPage, Routes } from "@blitzjs/next"
 import { invalidateQuery, useMutation } from "@blitzjs/rpc"
 import { useRouter } from "next/router"
 
-import createSchemaFn from "../../app/schemas/mutations/newSchema"
+import createSchemaFn from "../../app/schemas/mutations/createSchema"
 import getSchemas from "../../app/schemas/queries/getSchemas"
 import Form from "../../app/core/components/Form"
 import LabeledTextField from "../../app/core/components/LabeledTextField"
