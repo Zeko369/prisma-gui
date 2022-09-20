@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Suspense fallback={<h1>Loading...</h1>}>
       <ErrorBoundary FallbackComponent={RootErrorFallback}>
         <Component {...pageProps} />
-        <style> {`body {background-color: black; color: white}`}</style>
+        <style> {`body {background-color: black; color: white} a { color: aqua; }`}</style>
       </ErrorBoundary>
     </Suspense>
   )
