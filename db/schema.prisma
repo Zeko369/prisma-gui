@@ -20,6 +20,7 @@ model User {
   email          String   @unique
   hashedPassword String?
   role           String   @default("USER")
+  schemas        Schema[]
 
   tokens   Token[]
   sessions Session[]
@@ -63,3 +64,14 @@ model Token {
 // enum TokenType {
 //   RESET_PASSWORD
 // }
+
+model Schema {
+  id     String @id @default(cuid())
+  name   String
+  code   String
+  user   User?  @relation(fields: [userId], references: [id])
+  userId Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
