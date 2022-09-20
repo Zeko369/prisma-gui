@@ -27,15 +27,16 @@
     "@blitzjs/auth": "2.0.0-beta.4",
     "@blitzjs/next": "2.0.0-beta.4",
     "@blitzjs/rpc": "2.0.0-beta.4",
+    "@mrleebo/prisma-ast": "0.4.1",
+    "@hookform/resolvers": "2.9.8",
     "@prisma/client": "4.0.0",
     "blitz": "2.0.0-beta.4",
     "next": "12.2.5",
     "prisma": "4.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "zod": "3.17.3",
-    "final-form": "4.20.7",
-    "react-final-form": "6.5.9"
+    "react-hook-form": "7.35.0",
+    "zod": "3.17.3"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "12.0.8",
